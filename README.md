@@ -19,7 +19,7 @@ TemplateRenderer is a lightweight and flexible PHP-based template engine designe
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/template-renderer.git
+   git clone https://github.com/thesiamak01/template-renderer.git
    ```
 
 2. Include the main class in your PHP project:
