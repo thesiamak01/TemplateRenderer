@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[tag::siteTitle]</title>
+    <style>body{font-family:'Arial',sans-serif;margin:0;padding:0;background-color:#f4f4f4;color:#333}header{background-color:#141414;color:white;padding:20px;text-align:center}header h2{margin:0}.container{width:80%;margin:0 auto;padding:20px}.link-section{background-color:#fff;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.1);padding:15px;margin:20px 0}.link-section h3{color:#444;font-size:1.5em;margin-bottom:15px}.link{margin:10px 0}.link a{text-decoration:none;color:#007bff;font-size:1.1em;transition:color 0.3s ease}.link a:hover{color:#0056b3}.divider{border-top:2px solid #eee;margin:30px 0}form{background-color:#fff;padding:20px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.1)}form label{font-size:1.1em;color:#444;margin-bottom:8px;display:block}form input[type="text"],form input[type="email"],form input[type="password"],form textarea{width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;font-size:1em;box-sizing:border-box}form button{background-color:#007bff;color:white;padding:10px 20px;border:none;border-radius:4px;font-size:1.1em;cursor:pointer;transition:background-color 0.3s ease}form button:hover{background-color:#0056b3}form input[type="text"]:focus,form input[type="email"]:focus,form input[type="password"]:focus,form textarea:focus{border-color:#007bff;outline:none}</style>
+</head>
+<body>
+
+<header>
+    <h2>[tag::siteTitle]</h2>
+    <p><a href="[tag::siteLink]" target="_blank">Visit Website</a></p>
+</header>
+
+<div class="container">
+    <!-- Blog Categories Section -->
+    [tag::BlogPostCategories--Block]
+    <div class="link-section">
+        <h3>Categories</h3>
+        [tag::BlogPostCategories--Loop]
+        <div class="link">
+            <a title="[tag::CategoryName]" href="[tag::CategoryLink]">
+                [tag::CategoryName]
+            </a>
+        </div>
+        [/tag::BlogPostCategories--Loop]
+    </div>
+    [/tag::BlogPostCategories--Block]
+
+
+    <!-- Authors List Section -->
+    [tag::AnotherList--Block]
+    <div class="link-section">
+        <h3>Authors</h3>
+        [tag::AnotherList--Loop]
+        <div class="link">
+            <a title="[tag::ItemName]" href="[tag::ItemLink]">
+                [tag::ItemName]
+            </a>
+        </div>
+        [/tag::AnotherList--Loop]
+    </div>
+    [/tag::AnotherList--Block]
+
+
+    <!-- Authors List Section -->
+    [tag::PostList--Block]
+    <div class="link-section">
+        <h3>Post List</h3>
+        [tag::PostList--Loop]
+        <div class="link">
+            <a title="[tag::PostItemName]" href="[tag::PostItemLink]">
+                [tag::PostItemName]
+            </a>
+        </div>
+        [/tag::PostList--Loop]
+    </div>
+    [/tag::PostList--Block]
+
+
+    [tag::form]
+
+
+    <div class="link-section">
+
+        [tag::php]
+            echo 'Hello World';
+        [/tag::php]
+
+        <div class="divider"></div>
+
+        [tag::if($auth == true)]
+            auth is true
+        [tag::else]
+            auth is false
+        [tag::endif]
+
+        <div class="divider"></div>
+
+        [tag::if($val1 > $val2)]
+            val1 > val2
+        [tag::elseif($val1 == $val2)]
+            val1 = val2
+        [tag::else]
+            val1 < val2
+        [tag::endif]
+
+        <div class="divider"></div>
+
+        [tag::if($name == 'ali')]
+            name is ali
+        [tag::elseif($name == 'reza')]
+            name is reza
+        [tag::else]
+            name is unknown
+        [tag::endif]
+
+        <div class="divider"></div>
+
+        [tag::include('include-text.txt')]
+    </div>
+
+</div>
+
+</body>
+</html>
