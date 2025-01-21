@@ -1,5 +1,7 @@
 # TemplateRenderer
 
+![Banner](https://raw.githubusercontent.com/thesiamak01/TemplateRenderer/refs/heads/main/TemplateRenderer-theSiamak01.png)
+
 ## Overview
 TemplateRenderer is a lightweight and flexible PHP-based template engine designed for processing custom tags within template strings. It supports variable replacement, block processing, conditional statements, PHP code execution, and template inclusion.
 
